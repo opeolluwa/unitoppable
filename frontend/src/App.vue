@@ -1,33 +1,73 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// import { ref } from "vue";
+import AppButton from "./components/app-button.vue";
+
+// const displayBioForm = ref(false)
+// const displayPictureForm = ref(false)
+// const displayAsfRoleForm = ref(false)
+// const displayQuotesForm = ref(false)
+
+
+// // show the bioform
+// const showBioform = () => displayBioForm.value = true;
+// const showPictureForm = () => displayPictureForm.value = true;
+// const showAsfRoleForm = () => displayAsfRoleForm.value = true;
+// const showQuotesForm = () => displayQuotesForm.value = true;
+
+// // hide the bioform
+// const hideBioform = () => displayBioForm.value = false;
+// const hidePictureForm = () => displayPictureForm.value = false;
+// const hideAsfRoleForm = () => displayAsfRoleForm.value = false;
+// const hideQuotesForm = () => displayQuotesForm.value = false;
+
+
+// // the form data
+// const bioData = ref({
+//   name: "",
+//   email: "",
+//   phone: "",
+//   address: "",
+//   dob: "",
+// });
+
+// const pictureData = ref({
+//   picture: "",
+// });
+
+// const asfRoleData = ref({
+//   role: "",
+// });
+
+// const quotesData = ref({
+//   quote: "",
+// });
+
+// // the form submit
+// const submitBioForm = () => {
+//   console.log(bioData.value);
+//   hideBioform();
+// };
+
 </script>
 
 <template>
-  <div>
-       <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container py-10 sm:py-20 h-[100vh-40px]">
+    <h1 class="text-4xl font-bold text-center">Dear Untoppable ...</h1>
+    <p class="leading-1 text-base text-center">
+      So, you made it to the finish line and we think It would be great to share
+      in you Joy and Success, dont you think 🫣
+
+      So the Task is Simple, Provide us with some inofmration and it's all has been 🎒
+
+      Swipe left when ready or cliclk the Button Below! ✨
+    </p>
+
+    <img src="" alt="image">
+    <AppButton
+      text="Begin"
+      class="bg-black w-full text-white block mt-4 relative bottom-0"
+    />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>

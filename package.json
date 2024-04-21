@@ -1,0 +1,36 @@
+{
+  "name": "unstoppable",
+  "version": "1.0.0",
+  "description": "ASF FYB Data Collection form ",
+  "main": "index.js",
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "scripts": {
+    "dev": "concurrently --names RODEO,UI,BACKEND --prefix-colors red,yellow,green \"npm run rodeo\" \"npm run frontend\" \"npm run backend\"",
+    "all": "docker compose up",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend  && cargo shuttle run",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && cargo run build",
+    "deploy": "cd backend && cargo shuttle deploy",
+    "predeploy": "npm run build",
+    "install": "sh ./scripts/install-toolchain",
+    "rodeo":"rodeo run --config=rodeo.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opeolluwa/unstoppable.git"
+  },
+  "author": "Adeoye Adefemi <adeofemiadeoye@yahoo.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/opeolluwa/unstoppable/issues"
+  },
+  "homepage": "https://github.com/opeolluwa/unstoppable#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
